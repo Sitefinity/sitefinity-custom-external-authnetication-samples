@@ -49,7 +49,13 @@ namespace AutehnticationSamples
             {
                 if (ticket.Identity != null)
                 {
-                    Request.Context.Authentication.SignIn(ticket.Properties, ticket.Identity);
+                    this.Context.Authentication.SignIn(ticket.Properties, ticket.Identity);
+                }
+
+                if (!string.IsNullOrWhiteSpace(ticket.Properties.RedirectUri))
+                {
+                    Response.Redirect(ticket.Properties.RedirectUri);
+                    return true;
                 }
             }
 
