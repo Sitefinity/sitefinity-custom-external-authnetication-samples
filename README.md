@@ -15,7 +15,7 @@ The job of the EAP is to authenticate the user and then pass a claims based iden
  ```
 using Microsoft.Owin.Security;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class RemoteLoginExternalAuthenticationProviderOptions : AuthenticationOptions
     {
@@ -38,7 +38,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Telerik.Sitefinity.Security.Claims;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class RemoteLoginExternalAuthenticationProviderHandler : AuthenticationHandler<RemoteLoginExternalAuthenticationProviderOptions>
     {
@@ -234,7 +234,7 @@ namespace SitefinityWebApp.AuthProvider
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Infrastructure;
 
-namespace AutehnticationSamples
+namespace AuthnticationSamples
 {
     public class RemoteLoginExternalAuthenticationProviderMiddleware : AuthenticationMiddleware<RemoteLoginExternalAuthenticationProviderOptions>
     {
@@ -257,7 +257,7 @@ using System.Collections.Generic;
 using Telerik.Sitefinity.Authentication;
 using Telerik.Sitefinity.Authentication.Configuration.SecurityTokenService.ExternalProviders;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class AuthenticationProvidersInitializerExtender : AuthenticationProvidersInitializer
     {
@@ -291,7 +291,7 @@ using Telerik.Microsoft.Practices.Unity;
 using Telerik.Sitefinity.Abstractions;
 using Telerik.Sitefinity.Authentication;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class Global : System.Web.HttpApplication
     {
@@ -337,7 +337,7 @@ using System.Web;
 using Telerik.Sitefinity.Security.Claims;
 using Telerik.Sitefinity.Web;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class LocalLoginExternalAuthenticationProviderHandler : AuthenticationHandler<LocalLoginExternalAuthenticationProviderOptions>
     {
@@ -468,7 +468,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace AutehnticationSamples.DummyIdentityProvider
+namespace AuthenticationSamples.DummyIdentityProvider
 {
     /// <summary>
     /// Identity providers are separate web apps, but for the purpose of the demo we are hosting it inside Sitefinity
@@ -518,11 +518,11 @@ namespace AutehnticationSamples.DummyIdentityProvider
 ```
 Next, create a startup class to register t he dummy identity provider
 ```
-using AutehnticationSamples.DummyIdentityProvider;
+using AuthenticationSamples.DummyIdentityProvider;
 using Owin;
 using Telerik.Sitefinity.Owin;
 
-namespace AutehnticationSamples
+namespace AuthenticationSamples
 {
     public class Startup
     {
